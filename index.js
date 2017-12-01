@@ -43,7 +43,7 @@ function handleEvent(event) {
   console.log("received", receivedWords)
   const responsesArrays = receivedWords.map( keyword => {
     keyword = keyword.toLowerCase();
-    if(responses[keywords[keyword]]) return responses[keywords[keyword]];
+    if(responses[keywords[keyword]] !== undefined) return responses[keywords[keyword]];
   });
 
   const possibleResponses = [].concat.apply([], responsesArrays);
