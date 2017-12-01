@@ -42,6 +42,7 @@ function handleEvent(event) {
   const receivedWords = event.message.text.split(' ');
   console.log("received", receivedWords)
   const responsesArrays = receivedWords.map( keyword => {
+    keyword = keyword.toLowerCase();
     if(responses[keywords[keyword]]) return responses[keywords[keyword]];
   });
 
