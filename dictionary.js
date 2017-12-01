@@ -1,4 +1,4 @@
-export default const dictionary = {
+const dictionary = {
   responses: {
     responseRichard: [
       'perutmu masih enak dipegang pegang?',
@@ -27,3 +27,5 @@ export default const dictionary = {
     ciyus: responseJimmy,
   },
 };
+
+module.exports = dictionary;
