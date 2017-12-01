@@ -17,14 +17,14 @@ const dictionary = {
     ],
   },
   keywords: {
-    richard: responseRichard,
-    ricat: responseRichard,
-    ricad: responseRichard,
-    harris: responseRichard,
-    santoby: responseRichard,
+    richard: 'responseRichard',
+    ricat: 'responseRichard',
+    ricad: 'responseRichard',
+    harris: 'responseRichard',
+    santoby: 'responseRichard',
 
-    jimmy: responseJimmy,
-    ciyus: responseJimmy,
+    jimmy: 'responseJimmy',
+    ciyus: 'responseJimmy',
   },
 };
 

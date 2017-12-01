@@ -37,18 +37,22 @@ function handleEvent(event) {
     // ignore non-text-message event
     return Promise.resolve(null);
   }
-
+  const responses = dictionary.responses;
+  const keywords = dictionary.keywords;
   const receivedWords = event.message.text.split(' ');
-  const possibleResponses = receivedWords.map( keyword => {
-    if(responses[keyword]) return responses[keyword];
+  console.log("received", receivedWords)
+  const responsesArrays = receivedWords.map( keyword => {
+    if(responses[keywords[keyword]]) return responses[keywords[keyword]];
   });
+
+  const possibleResponses = [].concat.apply([], responsesArrays);
   console.log("possible:", possibleResponses);
 
   const randomIndex = getRandomInt(0, possibleResponses.length);
   
   const replyToBeSent = { type: 'text', text: possibleResponses[randomIndex] };
   // use reply API
-  return client.replyMessage(event.replyToken, echo);
+  return client.replyMessage(event.replyToken, replyToBeSent);
 
 }
 
