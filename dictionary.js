@@ -35,8 +35,30 @@ const dictionary = {
       '"rumahku paling jauh oi, di pandau"',
       '"ria kudanya, aku cuma tali"',
       'otong surotonggg, tong tong tong',
-    ]
+    ],
 
+    responseRenita: [
+      '"Smash azisss... -- ..bagusss"',
+      'mbae masih sering dipijitin tangannya sama michael?',
+      'yang punya dbrownies cafe itu kan?',
+      'kata farhan dia suka berdelusi'
+    ],
+
+    responseRia: [
+      '"aku kudanya, eh salah aku talinya, farhan kudanya"',
+      'Ria bukannya habis wisuda mau langsung married ya?',
+      'Segan lah mau sebut nama lead programmer ciputra group',
+    ],
+
+    responseRiri: [
+      ''
+    ],
+
+    responseSherlon: [
+      'sherlon hong',
+      'pecinta kuliner pku',
+    ],
+    
   },
   keywords: {
     richard: 'responseRichard',
@@ -62,6 +84,26 @@ const dictionary = {
     han: 'responseFarhan',
     hasan: 'responseFarhan',
     hassan: 'responseFarhan',
+
+    mbae: 'responseRenita',
+    mbake: 'responseRenita',
+    renita: 'responseRenita',
+    re: 'responseRenita',
+    ree: 'responseRenita',
+    reeminno: 'responseRenita',
+
+    ria: 'responseRia',
+
+    riri: 'responseRiri',
+    ri: 'responseRiri',
+    rii: 'responseRiri',
+
+    sherlon: 'responseSherlon',
+    sher: 'responseSherlon',
+    lon: 'responseSherlon',
+    angri: 'responseSherlon',
+    angriawan: 'responseSherlon',
+
   },
 };
 
