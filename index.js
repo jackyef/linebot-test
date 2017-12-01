@@ -1,7 +1,14 @@
 'use strict';
 
+import { responses, keywords } from './dictionary';
 const line = require('@line/bot-sdk');
 const express = require('express');
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+}
 
 // create LINE SDK config from env variables
 const config = {
@@ -31,9 +38,14 @@ function handleEvent(event) {
     return Promise.resolve(null);
   }
 
-  // create a echoing text message
-  const echo = { type: 'text', text: event.message.text };
+  const receivedWords = event.message.text.split(' ');
+  const possibleResponses = receivedWords.map( keyword => {
+    if(responses[keyword]) return responses[keyword];
+  });
 
+  const randomIndex = getRandomInt(0, possibleResponses.length);
+  
+  const replyToBeSent = { type: 'text', text: possibleResponses[randomIndex] };
   // use reply API
   return client.replyMessage(event.replyToken, echo);
 
