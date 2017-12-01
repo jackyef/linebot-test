@@ -42,6 +42,7 @@ function handleEvent(event) {
   const possibleResponses = receivedWords.map( keyword => {
     if(responses[keyword]) return responses[keyword];
   });
+  console.log("possible:", possibleResponses);
 
   const randomIndex = getRandomInt(0, possibleResponses.length);
   
