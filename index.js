@@ -1,6 +1,6 @@
 'use strict';
 
-import { responses, keywords } from './dictionary';
+const dictionary = require('./dictionary');
 const line = require('@line/bot-sdk');
 const express = require('express');
 
